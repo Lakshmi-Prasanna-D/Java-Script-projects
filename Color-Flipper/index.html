@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Stack heading on top of buttons */
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 30px; /* Space between heading and buttons */
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: row; /* Buttons in a row */
+            justify-content: center;
+            gap: 15px; /* Space between buttons */
+        }
+
+        button {
+            border-radius: 12px;
+            padding: 15px 30px;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.2s ease, background-color 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .green {
+            background-color: green;
+            color: aliceblue;
+        }
+
+        .red {
+            background-color: red;
+            color: aliceblue;
+        }
+
+        .blue {
+            background-color: blue;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Color-Flipper</h1>
+
+    <div class="button-container">
+        <button class="green" onClick="setColor('green')">Green</button>
+        <button class="red" onClick="setColor('red')">Red</button>
+        <button class="blue" onClick="setColor('blue')">Blue</button>
+        <button onclick="randomColor()">Random</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
